@@ -68,7 +68,7 @@ class Vector3{
   draw(color)
   {
     fill(color);
-    sphere(this.x, this.y, this.z, 5);
+    sphere(this.x, this.y);
   }
 }
 
@@ -138,10 +138,16 @@ class Vector2
 	}
   }
 
+
+let pos = new Vector2(10,10,10);
+let velocity = new Vector2(1,2,0.5);
 function setup() {
   createCanvas(400, 400);
+  //createCanvas(100, 100, WEBGL);
 }
 
 function draw() {
   background(220);
+  pos.add(velocity);
+  pos.draw("pink");
 }
